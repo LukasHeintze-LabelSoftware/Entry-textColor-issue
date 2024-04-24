@@ -1,12 +1,12 @@
-﻿namespace MauiAppTest;
+﻿using System.ComponentModel;
+
+namespace MauiAppTest;
 
 public partial class MainPage : ContentPage
 {
     public MainPage()
     {
         InitializeComponent();
-        TestProp = "This is a Test";
+        BindingContext = new MainPageViewModel();
     }
-
-    public string TestProp { get; set; }
 }

@@ -3,8 +3,8 @@
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:namespace="clr-namespace:MauiAppTest"
-    x:DataType="namespace:MainPage"
+    xmlns:vm="clr-namespace:MauiAppTest"
+    x:DataType="vm:MainPageViewModel"
     x:Class="MauiAppTest.MainPage">
 
     <ScrollView>
@@ -17,6 +17,9 @@
                 Aspect="AspectFit"
                 SemanticProperties.Description="dot net bot in a race car number eight" />
 
+            <Button Text="Click me"
+                    Command="{Binding TestCommand}"/>
+            
             <Entry
                 Text="{Binding TestProp}"
                 TextColor="Red" />
